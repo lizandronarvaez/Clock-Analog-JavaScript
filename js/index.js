@@ -12,23 +12,24 @@ function SetDates() {
     let seconds = dates.getSeconds()
     const seconds_degress = ((seconds / 60) * 360) + 90
     segundos.style.transform = `rotate(${seconds_degress}deg)`
-    
+
     //Obtener los minutos
     let minutes = dates.getMinutes()
     const minutes_degrees = ((minutes / 60) * 360) + 90
     minutos.style.transform = `rotate(${minutes_degrees}deg)`
-    
+
     //Obtener las horas
     let hours = dates.getHours()
     const hours_degress = ((hours / 12) * 360) + 90
     horas.style.transform = `rotate(${hours_degress}deg)`
-    HoraDigital.textContent = `${hours} : ${minutes} : ${seconds}`
-    
-     // Condicionales
-    if (seconds < 10) seconds = '0' + seconds 
-    if (minutes < 10) minutes = '0' + minutes
-    if (hours < 10) hours = '0'+ hours
 
+    // Condicionales
+    if (seconds < 10) seconds = '0' + seconds
+    if (minutes < 10) minutes = '0' + minutes
+    if (hours < 10) hours = '0' + hours
+
+    // Hora digital
+    HoraDigital.textContent = `${hours} : ${minutes} : ${seconds}`
 }
 
 setInterval(SetDates, 1000)
