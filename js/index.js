@@ -2,7 +2,7 @@
 const segundos = document.getElementById('segundos')
 const minutos = document.getElementById('minutos')
 const horas = document.getElementById('horas')
-const hora = document.querySelector('.hora')
+const HoraDigital = document.querySelector('.hora')
 
 function SetDates() {
     // Metodo date()
@@ -22,7 +22,7 @@ function SetDates() {
     let hours = dates.getHours()
     const hours_degress = ((hours / 12) * 360) + 90
     horas.style.transform = `rotate(${hours_degress}deg)`
-    hora.textContent = `${hours} : ${minutes} : ${seconds}`
+    HoraDigital.textContent = `${hours} : ${minutes} : ${seconds}`
     
      // Condicionales
     if (seconds < 10) seconds = '0' + seconds 
