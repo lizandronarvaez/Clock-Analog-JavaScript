@@ -1,7 +1,7 @@
-const segundos = document.getElementById('segundos')
-const minutos = document.getElementById('minutos')
-const horas = document.getElementById('horas')
-const HoraDigital = document.querySelector('.hora')
+let segundos = document.getElementById('segundos')
+let minutos = document.getElementById('minutos')
+let horas = document.getElementById('horas')
+let HoraDigital = document.querySelector('.hora')
 
 function SetDates() {
 
